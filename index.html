@@ -27,6 +27,7 @@
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
         <!--! Javascript -->
+        <script src="./js/function.js"></script>
         <script src="./js/script.js" defer></script>
 
     </head>
@@ -34,7 +35,16 @@
 <body>
     <div id="root">
 
-
+        <header>
+            <h1 v-text="message"></h1>
+        </header>
+        <main>
+            <div>
+                <h3>{{greetings}}</h3>
+                <img :src="vueImg" :alt="imgInfo">
+            </div>
+            <button class="btn btn-primary" v-on:click="confetti" >Complimenti!</button>
+        </main>
     </div>
 </body>
 
